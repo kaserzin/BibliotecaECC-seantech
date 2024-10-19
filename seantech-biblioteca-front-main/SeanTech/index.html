@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca ECC - Catálogo de Livros</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+
+    <main>
+        <section class="catalogo">
+            <h2>CATALOGO</h2>
+            <div class="livros">
+                <!-- Livros já existentes -->
+                <div class="livro" onclick="abrirModal('Dom Quixote', 'Miguel de Cervantes', 'OIP (1).jpg')">
+                    <img src="imagens/OIP (1).jpg"alt="Capa do livro Dom Quixote">
+                    <h3>Dom Quixote</h3>
+                    <p>Autor: Miguel de Cervantes</p>
+                </div>
+                <div class="livro" onclick="abrirModal('Diário de Anne Frank', 'Anne Frank', 'large.jpg')">
+                    <img src="imagens/large.jpg" alt="Capa do livro Diário de Anne Frank">
+                    <h3>Diário de Anne Frank</h3>
+                    <p>Autor: Anne Frank</p>
+                </div>
+                <div class="livro" onclick="abrirModal('Harry Potter Cálice de Fogo', 'J.K. Rowling', 'D_NQ_NP_835042-MLB44754843826_012021-F.jpg')">
+                    <img src="imagens/D_NQ_NP_835042-MLB44754843826_012021-F.jpg" alt="Capa do livro Harry Potter Cálice de Fogo">
+                    <h3>Harry Potter Cálice de Fogo</h3>
+                    <p>Autor: J.K. Rowling</p>
+                </div>
+                <div class="livro" onclick="abrirModal('Lupin', 'Mauricio', 'R.jpg')">
+                    <img src="imagens/R.jpg" alt="Capa do livro Lupin">
+                    <h3>Lupin</h3>
+                    <p>Autor: Mauricio</p>
+                </div>
+
+                <!-- Novos livros adicionados -->
+                <div class="livro" onclick="abrirModal('A Revolução dos Bichos', 'George Orwell', 'revolucao-bichos.jpg')">
+                    <img src="imagens/a-revolucao-dos-bichos.jpg" alt="Capa do livro A Revolução dos Bichos">
+                    <h3>A Revolução dos Bichos</h3>
+                    <p>Autor: George Orwell</p>
+                </div>
+                <div class="livro" onclick="abrirModal('1984', 'George Orwell', '1984.jpg')">
+                    <img src="imagens/OIP.jpg" alt="Capa do livro 1984">
+                    <h3>1984</h3>
+                    <p>Autor: George Orwell</p>
+                </div>
+                <div class="livro" onclick="abrirModal('O Pequeno Príncipe', 'Antoine de Saint-Exupéry', 'pequeno-principe.jpg')">
+                    <img src="imagens/p.jpg" alt="Capa do livro O Pequeno Príncipe">
+                    <h3>O Pequeno Príncipe</h3>
+                    <p>Autor: Antoine de Saint-Exupéry</p>
+                </div>
+                <div class="livro" onclick="abrirModal('A Guerra dos Tronos', 'George R.R. Martin', 'guerra-dos-tronos.jpg')">
+                    <img src="imagens/das.jpg" alt="Capa do livro A Guerra dos Tronos">
+                    <h3>A Guerra dos Tronos</h3>
+                    <p>Autor: George R.R. Martin</p>
+                </div>
+                <div class="livro" onclick="abrirModal('O Senhor dos Anéis', 'J.R.R. Tolkien', 'senhor-aneis.jpg')">
+                    <img src="imagens/senhor-dos-aneis-colume-unico-amazon.jpg" alt="Capa do livro O Senhor dos Anéis">
+                    <h3>O Senhor dos Anéis</h3>
+                    <p>Autor: J.R.R. Tolkien</p>
+                </div>
+                <div class="livro" onclick="abrirModal('Cem Anos de Solidão', 'Gabriel García Márquez', 'cem-anos-solidao.jpg')">
+                    <img src="imagens/R (1)ddd.jpg" alt="Capa do livro Cem Anos de Solidão">
+                    <h3>Cem Anos de Solidão</h3>
+                    <p>Autor: Gabriel García Márquez</p>
+                </div>
+                <div class="livro" onclick="abrirModal('A Divina Comédia', 'Dante Alighieri', 'divina-comedia.jpg')">
+                    <img src="imagens/37039854583_c0fe912932_b.jpg" alt="Capa do livro A Divina Comédia">
+                    <h3>A Divina Comédia</h3>
+                    <p>Autor: Dante Alighieri</p>
+                </div>
+                <div class="livro" onclick="abrirModal('Crime e Castigo', 'Fiódor Dostoiévski', 'crime-castigo.jpg')">
+                    <img src="imagens/f.jpg" alt="Capa do livro Crime e Castigo">
+                    <h3>Crime e Castigo</h3>
+                    <p>Autor: Fiódor Dostoiévski</p>
+                </div>
+                <div class="livro" onclick="abrirModal('O Morro dos Ventos Uivantes', 'Emily Brontë', 'morro-ventos.jpg')">
+                    <img src="imagens/asd.jpg" alt="Capa do livro O Morro dos Ventos Uivantes">
+                    <h3>O Morro dos Ventos Uivantes</h3>
+                    <p>Autor: Emily Brontë</p>
+                </div>
+                <div class="livro" onclick="abrirModal('Frankenstein', 'Mary Shelley', 'frankenstein.jpg')">
+                    <img src="imagens/y.jpg" alt="Capa do livro Frankenstein">
+                    <h3>Frankenstein</h3>
+                    <p>Autor: Mary Shelley</p>
+                </div>
+                <div class="livro" onclick="abrirModal('Moby Dick', 'Herman Melville', 'moby-dick.jpg')">
+                    <img src="imagens/i.jpg" alt="Capa do livro Moby Dick">
+                    <h3>Moby Dick</h3>
+                    <p>Autor: Herman Melville</p>
+                </div>
+                <div class="livro" onclick="abrirModal('O Apanhador no Campo de Centeio', 'J.D. Salinger', 'apanhador-centeio.jpg')">
+                    <img src="imagens/o.jpg" alt="Capa do livro O Apanhador no Campo de Centeio">
+                    <h3>O Apanhador no Campo de Centeio</h3>
+                    <p>Autor: J.D. Salinger</p>
+                </div>
+                <div class="livro" onclick="abrirModal('O Grande Gatsby', 'F. Scott Fitzgerald', 'grande-gatsby.jpg')">
+                    <img src="imagens/u.jpg" alt="Capa do livro O Grande Gatsby">
+                    <h3>O Grande Gatsby</h3>
+                    <p>Autor: F. Scott Fitzgerald</p>
+                </div>
+                <div class="livro" onclick="abrirModal('Orgulho e Preconceito', 'Jane Austen', 'orgulho-preconceito.jpg')">
+                    <img src="imagens/81lDJ57frdL.jpg" alt="Capa do livro Orgulho e Preconceito">
+                    <h3>Orgulho e Preconceito</h3>
+                    <p>Autor: Jane Austen</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <!-- Modal de informações do livro -->
+        <div id="modal" class="modal" role="dialog" aria-labelledby="tituloModal" aria-hidden="true">
+            <div class="modal-content">
+                <span class="fechar" onclick="fecharModal()">&times;</span>
+                <img id="modal-img" src="" alt="Imagem do livro">
+                <h3 id="modal-titulo"></h3>
+                <p id="modal-autor"></p>
+                <button onclick="reservarLivro()">Reservar</button>
+            </div>
+        </div>
+    
+        <!-- Modal de login inicial com opções -->
+        <div id="loginModal" class="modal" role="dialog" aria-labelledby="loginOpcoes" aria-hidden="true">
+            <div class="modal-content">
+                <span class="fechar" onclick="fecharModal('loginModal')">&times;</span>
+                <h3 id="loginOpcoes">Login</h3>
+                <button onclick="abrirOpcao('criarContaModal')">Criar Conta</button>
+                <button onclick="abrirOpcao('jaTenhoContaModal')">Já Tenho Conta</button>
+            </div>
+        </div>
+    
+        <!-- Modal para criar conta -->
+        <div id="criarContaModal" class="modal" role="dialog" aria-labelledby="criarConta" aria-hidden="true">
+            <div class="modal-content">
+                <span class="fechar" onclick="fecharModal('criarContaModal')">&times;</span>
+                <h3 id="criarConta">Criar Conta</h3>
+                <input type="email" id="emailCriarConta" placeholder="Digite seu Gmail" aria-label="Digite seu Gmail" required>
+                <input type="password" id="senhaCriarConta" placeholder="Digite sua Senha" aria-label="Digite sua Senha" required>
+                <button onclick="criarConta()">Criar Conta</button>
+            </div>
+        </div>
+    
+        <!-- Modal para login de usuário existente -->
+        <div id="jaTenhoContaModal" class="modal" role="dialog" aria-labelledby="jaTenhoConta" aria-hidden="true">
+            <div class="modal-content">
+                <span class="fechar" onclick="fecharModal('jaTenhoContaModal')">&times;</span>
+                <h3 id="jaTenhoConta">Login</h3>
+                <input type="email" id="emailLogin" placeholder="Digite seu Gmail" aria-label="Digite seu Gmail" required>
+                <input type="password" id="senhaLogin" placeholder="Digite sua Senha" aria-label="Digite sua Senha" required>
+                <button onclick="login()">Login</button>
+            </div>
+        </div>
+
+    
+    
+    </body>
+    </html>
