@@ -23,6 +23,104 @@
       </div>
     </header>
     {% block content %} {% endblock content %}
+
+    <!-- Modal de informações do livro -->
+    <div
+      id="modal"
+      class="modal"
+      role="dialog"
+      aria-labelledby="tituloModal"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <span class="fechar" onclick="fecharModal()">&times;</span>
+        <img id="modal-img" src="" alt="Imagem do livro" />
+        <h3 id="modal-titulo"></h3>
+        <p id="modal-autor"></p>
+        <button onclick="reservarLivro()">Reservar</button>
+      </div>
+    </div>
+
+    <!-- Modal de login inicial com opções -->
+    <div
+      id="loginModal"
+      class="modal"
+      role="dialog"
+      aria-labelledby="loginOpcoes"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <span class="fechar" onclick="fecharModalById('loginModal')">&times;</span>
+        <h3 id="loginOpcoes">Login</h3>
+        <button onclick="abrirOpcao('criarContaModal')">Criar Conta</button>
+        <button onclick="abrirOpcao('jaTenhoContaModal')">
+          Já Tenho Conta
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal para criar conta -->
+    <div
+      id="criarContaModal"
+      class="modal"
+      role="dialog"
+      aria-labelledby="criarConta"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <span class="fechar" onclick="fecharModalById('criarContaModal')"
+          >&times;</span
+        >
+        <h3 id="criarConta">Criar Conta</h3>
+        <input
+          type="email"
+          id="emailCriarConta"
+          placeholder="Digite seu Gmail"
+          aria-label="Digite seu Gmail"
+          required
+        />
+        <input
+          type="password"
+          id="senhaCriarConta"
+          placeholder="Digite sua Senha"
+          aria-label="Digite sua Senha"
+          required
+        />
+        <button onclick="criarConta()">Criar Conta</button>
+      </div>
+    </div>
+
+    <!-- Modal para login de usuário existente -->
+    <div
+      id="jaTenhoContaModal"
+      class="modal"
+      role="dialog"
+      aria-labelledby="jaTenhoConta"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <span class="fechar" onclick="fecharModalById('jaTenhoContaModal')"
+          >&times;</span
+        >
+        <h3 id="jaTenhoConta">Login</h3>
+        <input
+          type="email"
+          id="emailLogin"
+          placeholder="Digite seu Gmail"
+          aria-label="Digite seu Gmail"
+          required
+        />
+        <input
+          type="password"
+          id="senhaLogin"
+          placeholder="Digite sua Senha"
+          aria-label="Digite sua Senha"
+          required
+        />
+        <button onclick="login()">Login</button>
+      </div>
+    </div>
+
     <footer>
       <div class="container">
         <p>&copy; Biblioteca ECC.</p>
