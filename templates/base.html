@@ -25,19 +25,25 @@
     {% block content %} {% endblock content %}
 
     <!-- Modal de informações do livro -->
-    <div
-      id="modal"
-      class="modal"
-      role="dialog"
-      aria-labelledby="tituloModal"
-      aria-hidden="true"
-    >
+    <div id="modal" class="modal" role="dialog" aria-labelledby="tituloModal" aria-hidden="true">
       <div class="modal-content">
-        <span class="fechar" onclick="fecharModal()">&times;</span>
-        <img id="modal-img" src="" alt="Imagem do livro" />
-        <h3 id="modal-titulo"></h3>
-        <p id="modal-autor"></p>
-        <button onclick="reservarLivro()">Reservar</button>
+          <span class="fechar" onclick="fecharModal()">&times;</span>
+          <img id="modal-img" src="" alt="Imagem do livro">
+          <h3 id="modal-titulo"></h3>
+          <p id="modal-autor"></p>
+  
+          <!-- Sistema de Avaliação -->
+          <div class="avaliacao">
+              <h4>Avalie este livro:</h4>
+              <span class="estrela" onclick="avaliar(1)">&#9733;</span>
+              <span class="estrela" onclick="avaliar(2)">&#9733;</span>
+              <span class="estrela" onclick="avaliar(3)">&#9733;</span>
+              <span class="estrela" onclick="avaliar(4)">&#9733;</span>
+              <span class="estrela" onclick="avaliar(5)">&#9733;</span>
+              <p id="resultado-avaliacao"></p>
+          </div>
+  
+          <button class="btn-reservar" onclick="reservarLivro()">Reservar</button>
       </div>
     </div>
 
@@ -130,3 +136,4 @@
     <script src="{% static 'js/script.js' %}"></script>
   </body>
 </html>
+
