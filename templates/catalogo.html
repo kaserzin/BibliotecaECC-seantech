@@ -1,83 +1,66 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
+{% load static %}  <!-- Certifique-se de que esta linha está presente -->
+
 {% block content %}
-{% load static %}
-
-
 <main>
   <section class="catalogo">
     <h2>CATALOGO</h2>
     <div class="livros">
 
-      <!-- Livros que vão ficar na tela sempre -->
-      <div
-        class="livro"
-        onclick="abrirModal('Dom Quixote', 'Miguel de Cervantes', 'dom_quixote.jpg')"
-        >
+      <div class="livro" onclick="abrirModal('Dom Quixote', 'Miguel de Cervantes', '{% static 'imagem/dom_quixote.jpg' %}')">
         <img src="{% static 'imagem/dom_quixote.jpg' %}" alt="Capa do livro Dom Quixote" />
         <h3>Dom Quixote</h3>
         <p>Autor: Miguel de Cervantes</p>
       </div>
 
-      <div
-        class="livro"
-        onclick="abrirModal('Diário de Anne Frank', 'Anne Frank', 'diario_anne.jpg')"
-      >
+      <div class="livro" onclick="abrirModal('Diário de Anne Frank', 'Anne Frank', '{% static 'imagem/diario_anne.jpg' %}')">
         <img src="{% static 'imagem/diario_anne.jpg' %}" alt="Capa do livro Diário de Anne Frank" />
         <h3>Diário de Anne Frank</h3>
         <p>Autor: Anne Frank</p>
       </div>
 
-      <div
-        class="livro"
-        onclick="abrirModal('Harry Potter Cálice de Fogo', 'J.K. Rowling', 'harry_potter_4.jpg')"
-      >
-        <img
-          src="{% static 'imagem/harry_potter_4.jpg' %}"
-          alt="Capa do livro Harry Potter Cálice de Fogo"
-        />
+      <div class="livro" onclick="abrirModal('Harry Potter Cálice de Fogo', 'J.K. Rowling', '{% static 'imagem/harry_potter_4.jpg' %}')">
+        <img src="{% static 'imagem/harry_potter_4.jpg' %}" alt="Capa do livro Harry Potter Cálice de Fogo" />
         <h3>Harry Potter Cálice de Fogo</h3>
         <p>Autor: J.K. Rowling</p>
       </div>
 
-      <div 
-        class="livro" 
-        onclick="abrirModal('Lupin', 'Mauricio', 'arsene_lupin.jpg')">
+      <div class="livro" onclick="abrirModal('Lupin', 'Mauricio', '{% static 'imagem/arsene_lupin.jpg' %}')">
         <img src="{% static 'imagem/arsene_lupin.jpg' %}" alt="Capa do livro Lupin" />
         <h3>Lupin</h3>
         <p>Autor: Mauricio</p>
       </div>
 
-      <!-- Novos livros adicionados -->
-      <div
-        class="livro"
-        onclick="abrirModal('A Revolução dos Bichos', 'George Orwell', 'revolucao_bichos.jpg')"
-      >
-        <img
-          src="{% static 'imagem/revolucao_bichos.jpg' %}"
-          alt="Capa do livro A Revolução dos Bichos"
-        />
+      <div class="livro" onclick="abrirModal('A Revolução dos Bichos', 'George Orwell', '{% static 'imagem/revolucao_bichos.jpg' %}')">
+        <img src="{% static 'imagem/revolucao_bichos.jpg' %}" alt="Capa do livro A Revolução dos Bichos" />
         <h3>A Revolução dos Bichos</h3>
         <p>Autor: George Orwell</p>
       </div>
 
-      <div
-        class="livro"
-        onclick="abrirModal('1984', 'George Orwell', 'george_orwell.jpg')"
-      >
+      <div class="livro" onclick="abrirModal('1984', 'George Orwell', '{% static 'imagem/george_orwell.jpg' %}')">
         <img src="{% static 'imagem/george_orwell.jpg' %}" alt="Capa do livro 1984" />
         <h3>1984</h3>
         <p>Autor: George Orwell</p>
       </div>
 
-      <div
-        class="livro"
-        onclick="abrirModal('O Pequeno Príncipe', 'Antoine de Saint-Exupéry', 'pequeno_principe.jpg')"
-      >
+      <div class="livro" onclick="abrirModal('O Pequeno Príncipe', 'Antoine de Saint-Exupéry', '{% static 'imagem/pequeno_principe.jpg' %}')">
         <img src="{% static 'imagem/pequeno_principe.jpg' %}" alt="Capa do livro O Pequeno Príncipe" />
         <h3>O Pequeno Príncipe</h3>
         <p>Autor: Antoine de Saint-Exupéry</p>
       </div>
+
     </div>
   </section>
+
+  <!-- Modais -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal()">&times;</span>
+      <h2 id="modal-titulo"></h2>
+      <p id="modal-autor"></p>
+      <img id="modal-imagem" src="" alt="" />
+    </div>
+  </div>
+
 </main>
 {% endblock content %}

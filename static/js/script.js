@@ -74,9 +74,10 @@ function abrirModal(titulo, autor, imagem) {
     const modal = document.getElementById("modal");
     document.getElementById("modal-titulo").textContent = titulo;
     document.getElementById("modal-autor").textContent = "Autor: " + autor;
-    document.getElementById("modal-img").src = imagem;
+    document.getElementById("modal-imagem").src = imagem;
     modal.style.display = "flex";
 }
+
 
 // Função para fechar o modal de livro
 function fecharModal() {
